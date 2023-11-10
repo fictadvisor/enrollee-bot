@@ -11,4 +11,5 @@ app = create_app(
     dispatcher=dispatcher,
     webhook_secret=settings.TELEGRAM_SECRET.get_secret_value(),
 )
+
 logging.basicConfig(level="DEBUG")

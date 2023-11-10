@@ -6,7 +6,6 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import AnyUrl
 
-
 from app.api.routes.webhook import webhook_router
 from app.api.stubs import BotStub, DispatcherStub, SecretStub
 from app.settings import settings
@@ -32,8 +31,6 @@ def create_app(bot: Bot, dispatcher: Dispatcher, webhook_secret: str) -> FastAPI
     )
 
     app.include_router(webhook_router)
-
-
 
     workflow_data = {
         "app": app,
